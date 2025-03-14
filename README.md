@@ -4,7 +4,7 @@ A php client for the Totus API.
 
 ## Installing
 ```bash
-composer require GoTotus\Totus
+composer require gototus/totus
 ```
 
 ## Usage
