@@ -1,0 +1,20 @@
+{
+    "name": "gototus/totus",
+    "description": "PHP Totus Library",
+    "type": "library",
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.9"
+    },
+    "license": "BSD-4",
+    "autoload": {
+        "psr-4": {
+            "GoTotus\\Totus\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "GoTotus Developers"
+        }
+    ]
+}
