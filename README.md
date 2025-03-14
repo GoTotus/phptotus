@@ -41,5 +41,5 @@ For detailed manuals about Totus please check: [docs.gototus.com](https://docs.g
 
 `composer require gototus/totus `
 
-[npmjs.com project page](https://www.npmjs.com/package/totus)
+[Packagist project page](https://packagist.org/packages/gototus/totus)
 
