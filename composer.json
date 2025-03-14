@@ -6,7 +6,7 @@
         "php": ">=7.4",
         "guzzlehttp/guzzle": "^7.9"
     },
-    "license": "BSD-4",
+    "license": "BSD-4-Clause",
     "autoload": {
         "psr-4": {
             "GoTotus\\Totus\\": "src/"

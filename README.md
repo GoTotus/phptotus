@@ -2,18 +2,18 @@
 
 A php client for the Totus API.
 
-## Installation
+## Installing
 ```bash
-composer require yourname/totus-phpj```
+composer require GoTotus\Totus
+```
 
 ## Usage
 ```php
 require 'vendor/autoload.php';
 
-use YourName\Totus\Totus;
+use GoTotus\Totus\Client;
 
-$totus = new Totus('your-api-key');
-
+$totus = new Client(); // can provide api key via constructor or TOTUS_KEY env var
 
 // Reference: GeoPOI
 $pois = $totus->Reference()->GeoPOI(gh: '69y7pkxfc', distance: 1000, what: 'shop', limit: 10);
