@@ -2,12 +2,11 @@
 
 A php client for the Totus API.
 
-## Installing
-```bash
-composer require gototus/totus
-```
+## Basic Usage
 
-## Usage
+`TOTUS_KEY` environment variable will be used to pick the api
+key ([create one here](https://gototus.com/console/apikeys))
+
 ```php
 require 'vendor/autoload.php';
 
@@ -29,6 +28,18 @@ $email = $totus->Validate()->email('info@x.com');
 echo $email;
 ````
 
-## Requirements
-- PHP 7.4+
-- Guzzle HTTP Client
+## Examples
+
+For further examples, check the `examples/` folder in this project.
+Or a public copy at the [GitHub Website](https://github.com/GoTotus/phptotus/tree/main/examples).
+
+## Manuals
+
+For detailed manuals about Totus please check: [docs.gototus.com](https://docs.gototus.com)
+
+## Installing
+
+`composer require gototus/totus `
+
+[npmjs.com project page](https://www.npmjs.com/package/totus)
+
