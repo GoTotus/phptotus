@@ -13,7 +13,7 @@ class Validate
         $this->totus = $totus;
     }
 
-    public function email(string $email, string $level = 'l4_dbs'): ValidatedEmail
+    public function email(string $email, string $level = 'l5_smell'): ValidatedEmail
     {
         $params = ['email' => $email, 'level' => $level];
         return new ValidatedEmail($this->totus->request('GET', '/validate/email', $params));
