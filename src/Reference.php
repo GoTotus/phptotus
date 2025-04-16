@@ -39,11 +39,11 @@ class Reference
         return array_map(fn($item) => new POI($item), $response);
     }
 
-    public function IP(?string $ip4 = null, ?string $ip6 = null): array
+    public function NetIP(?string $ip4 = null, ?string $ip6 = null): array
     {
         $params = [];
         if ($ip4) $params['ip4'] = $ip4;
         elseif ($ip6) $params['ip6'] = $ip6;
-        return $this->totus->request('GET', '/ref/ip', $params);
+        return $this->totus->request('GET', '/ref/net/ip', $params);
     }
 }

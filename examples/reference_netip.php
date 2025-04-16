@@ -9,13 +9,13 @@ $totus = new Client(); // can provide api key via constructor or TOTUS_KEY env v
 $reference = $totus->Reference();
 
 echo "Your Public IP ...\n";
-$result = $reference->IP();
+$result = $reference->NetIP();
 echo json_encode($result, JSON_PRETTY_PRINT) . "\n\n";
 
 echo "Cloudflare 1.1.1.1 ...\n";
-$result = $reference->IP(ip4: '1.1.1.1');
+$result = $reference->NetIP(ip4: '1.1.1.1');
 echo json_encode($result, JSON_PRETTY_PRINT) . "\n\n";
 
 echo "Cloudflare IPv6 for previous 1.1.1.1: 2606:4700:4700::1111 ...\n";
-$result = $reference->IP(ip6: '2606:4700:4700::1111');
+$result = $reference->NetIP(ip6: '2606:4700:4700::1111');
 echo json_encode($result, JSON_PRETTY_PRINT) . "\n";
