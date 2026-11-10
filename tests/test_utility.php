@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 use GoTotus\Totus\Client;
 use GoTotus\Totus\Dto\Balance;
@@ -29,15 +29,11 @@ assert(str_contains((string)$auth, 'your api_key is working'), '__toString shoul
 // Test Client methods exist
 $client = new Client('fake-test-key');
 assert(method_exists($client, 'balance'), 'client must have balance() method');
-assert(method_exists($client, 'Balance'), 'client must have Balance() method');
 assert(method_exists($client, 'authenticated'), 'client must have authenticated() method');
-assert(method_exists($client, 'Authenticated'), 'client must have Authenticated() method');
 assert(method_exists($client, 'Utility'), 'client must have Utility() method');
 
 $utility = $client->Utility();
 assert(method_exists($utility, 'balance'), 'utility must have balance() method');
-assert(method_exists($utility, 'Balance'), 'utility must have Balance() method');
 assert(method_exists($utility, 'authenticated'), 'utility must have authenticated() method');
-assert(method_exists($utility, 'Authenticated'), 'utility must have Authenticated() method');
 
 echo "phptotus balance and authenticated tests passed!\n";
