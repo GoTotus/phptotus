@@ -4,7 +4,7 @@
     "type": "library",
     "require": {
         "php": ">=7.4",
-        "guzzlehttp/guzzle": "^7.9"
+        "guzzlehttp/guzzle": "^7.16"
     },
     "license": "BSD-4-Clause",
     "autoload": {
