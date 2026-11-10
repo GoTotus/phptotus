@@ -26,6 +26,13 @@ print_r($ipInfo);
 // Validate: Email
 $email = $totus->Validate()->email('info@x.com');
 echo $email;
+
+// Utility: Check Authentication & Account Balance (free of charge)
+$auth = $totus->authenticated();
+echo "Authenticated: " . ($auth->authenticated() ? "YES" : "NO") . " ({$auth->tokenSm()})\n";
+
+$balance = $totus->balance();
+echo "Balance: {$balance->credits()} Credits\n";
 ````
 
 ## Examples

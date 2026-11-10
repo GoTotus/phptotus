@@ -5,6 +5,8 @@ namespace GoTotus\Totus;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\RequestException;
 use GoTotus\Totus\Errors\{TotusClientError, AuthenticationError, NotFoundError, ClientError, ServerError};
+use GoTotus\Totus\Dto\Authenticated;
+use GoTotus\Totus\Dto\Balance;
 
 class Client
 {
@@ -68,6 +70,21 @@ class Client
     public function Validate(): Validate
     {
         return new Validate($this);
+    }
+
+    public function Utility(): Utility
+    {
+        return new Utility($this);
+    }
+
+    public function balance(): Balance
+    {
+        return new Balance($this->makeRequest('GET', '/balance'));
+    }
+
+    public function authenticated(): Authenticated
+    {
+        return $this->Utility()->authenticated();
     }
 
     // Internal method for sub-services to use
